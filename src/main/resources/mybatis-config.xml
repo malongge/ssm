@@ -12,6 +12,6 @@
 
     <!-- 加载 映射文件 -->
     <mappers>
-        <mapper resource="mapper/TStudentMapper.xml" />
+        <mapper resource="mapper/StudentMapper.xml" />
     </mappers>
 </configuration>

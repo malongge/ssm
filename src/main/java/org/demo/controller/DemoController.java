@@ -15,7 +15,7 @@ public class DemoController {
     @Autowired
     StudentService studentService;
 
-    @RequestMapping(value = "/hello/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello/{id}", method = RequestMethod.GET, produces = {"application/json;charset=utf-8"})
     @ResponseBody
     public String hello(@PathVariable(value = "id") int id) {
         return Optional.ofNullable(studentService.getStudentById(id)).map(Student::getName).orElse("not found: " + String.valueOf(id));
